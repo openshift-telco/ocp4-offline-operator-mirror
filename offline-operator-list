@@ -1,0 +1,4 @@
+kubevirt-hyperconverged,10.0.0
+advanced-cluster-management,latest
+container-security-operator,latest
+performance-addon-operator,7.0.0
