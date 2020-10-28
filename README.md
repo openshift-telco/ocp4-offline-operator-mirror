@@ -1,6 +1,6 @@
 # OpenShift4 Offline Operator Catalog Build and Mirror
 
-> :heavy_exclamation_mark: *Red Hat support cannot assist with problems with this Repo*. For issues please open a GitHub issue.
+> :heavy_exclamation_mark: *Red Hat support cannot assist with problems with this Repo*.
 
 This script will create a custom operator catalog based on the desired operators and mirror the images to a local registry, useful for air-gapped (disconnected) or restricted networks.  Tested with OpenShift 4.6.
 
@@ -92,7 +92,7 @@ To update the catalog,run the script the same way you did the first time and inc
 
 ## Script Notes
 
-Unfortunately, just because an image is listed in the related images spec doesn't mean it exists or is even used by the operator. for example `registry.redhat.io/openshift4/ose-promtail` from the logging operator. Tthat image is put in the knownBadImages file to avoid attempting to mirror.
+Unfortunately, just because an image is listed in the related images spec doesn't mean it exists or is even used by the operator. for example `registry.redhat.io/openshift4/ose-promtail` from the logging operator. That image is put in the knownBadImages file to avoid attempting to mirror.
 
 ## Local Docker Registry
 
@@ -101,4 +101,4 @@ If you need a to create a local secured registry, follow the instructions from t
 
 ## Acknowledgements
 
-This work was heavily borrowed from Red Hat Consulting customer efforts (names obfuscated) and Mr. Arvin Amirian.
+This work was heavily borrowed from Red Hat Consulting customer efforts (names obfuscated) and Arvin Amirian.
