@@ -50,7 +50,7 @@ mirror-operator-catalog.py \
 ```Shell
 oc patch OperatorHub cluster --type json -p '[{"op": "add", "path": "/spec/disableAllDefaultSources", "value": true}]'
 ```
-8. Apply the yaml files in the `publish` folder. The image content source policy will create a new MCO render which will start a rolling reboot of your cluster nodes. You have to wait until that is complete before attempting to install operators from the catalog.
+8. Apply the two yaml files in the `publish` folder via `oc apply -f`. The image content source policy will create a new MCO render, which will start a rolling reboot of your cluster nodes. You have to wait until that is complete before attempting to install operators from the catalog.
 
 
 ##### Script Arguments
@@ -86,9 +86,10 @@ container-security-operator,latest
 performance-addon-operator,7.0.0
 ```
 
-## Updating The Catalogue
+## Updating The Catalog
 
-To update the catalog,run the script the same way you did the first time and increment the catalog-version. An updated Catalogue image will be created. Afterwards do an `oc apply -f rh-catalog-source.yaml` to update the catalogsource with the new image.
+To update the catalog, run the script again and increment the catalog-version. An updated Catalog image will be created. 
+Afterwards do an `oc apply -f rh-catalog-source.yaml` to update the catalogsource with the new image.
 
 ## Script Notes
 
