@@ -2,7 +2,7 @@
 
 > :heavy_exclamation_mark: *Red Hat support cannot assist with problems with this Repo*.
 
-This script will create a custom operator catalog based on the desired operators and mirror the images to a local registry, useful for air-gapped (disconnected) or restricted networks.  Tested with OpenShift 4.6.
+This script will create a custom operator catalog based on the desired operators and mirror the images to a local registry, useful for air-gapped (disconnected) or restricted networks.  Tested with OpenShift 4.6.1.
 
 What is the purpose of this?
 
@@ -16,7 +16,7 @@ It is assumed you already have a registry setup locally to mirror operator conte
 This tool was tested with the following versions of the runtime and utilities:
 
 1. RHEL 8.2
-2. Python 3.6.8 (with pyyaml,jinja2 library)
+2. Python 3.6.8 (with pyyaml,jinja2 library).  Do a `yum install python3,python3-jinja2` if on RHEL8.
 3. Podman v1.9.3 (If you use anything below 1.8, you might run into issues with multi-arch manifests)
 4. Skopeo 1.0.0 (If you use anything below 1.0 you might have issue with the newer manifests)
 
