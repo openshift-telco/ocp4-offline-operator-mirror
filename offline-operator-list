@@ -1,7 +1,0 @@
-kubevirt-hyperconverged,latest
-advanced-cluster-management,latest
-container-security-operator,latest
-performance-addon-operator,latest
-local-storage-operator,latest
-ptp-operator,latest
-sriov-network-operator,latest

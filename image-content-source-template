@@ -1,6 +1,0 @@
-apiVersion: operator.openshift.io/v1alpha1
-kind: ImageContentSourcePolicy
-metadata:
-  name: olm-image-content-source
-spec:
-  repositoryDigestMirrors: []
