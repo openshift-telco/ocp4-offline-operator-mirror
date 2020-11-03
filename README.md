@@ -35,9 +35,9 @@ For a full list of operators that work offline please see link below
 <https://access.redhat.com/articles/4740011>
 
 ## Installing OPM CLI
-1. oc image extract registry.redhat.io/openshift4/ose-operator-registry:v4.6 --registry-config='~/openshift/pull-secret-full.json' --path /usr/bin/opm:. --confirm
-2. sudo chmod +x opm
-3. sudo mv opm /usr/local/bin
+1. `oc image extract registry.redhat.io/openshift4/ose-operator-registry:v4.6 --registry-config='~/openshift/pull-secret-full.json' --path /usr/bin/opm:. --confirm`
+2. `sudo chmod +x opm`
+3. `sudo mv opm /usr/local/bin`
 
 ## Running the script
 
