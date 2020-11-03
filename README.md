@@ -25,9 +25,6 @@ This tool was tested with the following versions of the runtime and utilities:
 2. Podman v1.9.3 (If you use anything below 1.8, you might run into issues with multi-arch manifests)
 3. Skopeo 1.0.0 (If you use anything below 1.0 you might have issue with the newer manifests)
 4. OPM CLI
-  - oc image extract registry.redhat.io/openshift4/ose-operator-registry:v4.6 --registry-config='~/openshift/pull-secret-full.json' --path /usr/bin/opm:. --confirm
-  - sudo chmod +x opm
-  - sudo mv opm /usr/local/bin
 
 Please note this ideally works best with operators that meet the following criteria:
 
@@ -36,6 +33,11 @@ Please note this ideally works best with operators that meet the following crite
 
 For a full list of operators that work offline please see link below
 <https://access.redhat.com/articles/4740011>
+
+## Installing OPM CLI
+1. oc image extract registry.redhat.io/openshift4/ose-operator-registry:v4.6 --registry-config='~/openshift/pull-secret-full.json' --path /usr/bin/opm:. --confirm
+2. sudo chmod +x opm
+3. sudo mv opm /usr/local/bin
 
 ## Running the script
 
