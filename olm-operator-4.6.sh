@@ -33,8 +33,8 @@ if [ "${RH_OP}" = true ]
     echo "spec:" >> redhat-operator-index-manifests/catalogsource.yaml
     echo "  sourceType: grpc" >> redhat-operator-index-manifests/catalogsource.yaml
     echo "  image: $LOCAL_REGISTRY/$LOCAL_REGISTRY_INDEX_TAG" >> redhat-operator-index-manifests/catalogsource.yaml
-    echo "  displayName: Altiostar Temp Lab" >> redhat-operator-index-manifests/catalogsource.yaml
-    echo "  publisher: altiostar" >> redhat-operator-index-manifests/catalogsource.yaml
+    echo "  displayName: Temp Lab" >> redhat-operator-index-manifests/catalogsource.yaml
+    echo "  publisher: templab" >> redhat-operator-index-manifests/catalogsource.yaml
     echo "  updateStrategy:" >> redhat-operator-index-manifests/catalogsource.yaml
     echo "    registryPoll:" >> redhat-operator-index-manifests/catalogsource.yaml
     echo "      interval: 30m" >> redhat-operator-index-manifests/catalogsource.yaml
