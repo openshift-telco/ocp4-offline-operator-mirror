@@ -1,8 +1,8 @@
-# OpenShift4 Offline Operator Catalog Build and Mirror
+# OpenShift4 Offline Operator Mirror and Upgrade
 
 > :heavy_exclamation_mark: *Red Hat support cannot assist with problems with this Repo*.
 
-This script will create a custom operator catalog based on the desired operators and mirror the images to a local registry, useful for air-gapped (disconnected) or restricted networks.  Tested with OpenShift 4.6.1.
+This script will create a custom operator catalog based on the desired operators and mirror the images to a local registry, useful for air-gapped (disconnected) or restricted networks.  Tested with OpenShift 4.6.3.
 
 What is the purpose of this?
 
@@ -45,14 +45,14 @@ For a full list of operators that work offline please see link below
 2. Install the tools listed in the requirements section
 3. Login to your offline registry using podman (This is the registry where you will be publishing the catalog and related images)
 4. Login to registry.redhat.io using podman
-5. Modify variables to suit your environment in the script olm-operator-4.6.sh.
-6. Launch the script. See <https://access.redhat.com/articles/4740011> for list of supported offline operators.
+5. Modify variables to suit your environment in the script olm-operator.sh.
+6. Launch the script passing an argument to do either a mirror or an upgrade. See <https://access.redhat.com/articles/4740011> for list of supported offline operators that can be mirrored.
 
 ```Shell
-./olm-operator-4.6.sh
+./olm-operator.sh mirror|upgrade
 ```
 
-7. Disable default operator source
+7. Disable default operator source.  This only needs to be done once for a cluster.
 ```Shell
 oc patch OperatorHub cluster --type json -p '[{"op": "add", "path": "/spec/disableAllDefaultSources", "value": true}]'
 ```
