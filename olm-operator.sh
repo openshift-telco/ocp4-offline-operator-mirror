@@ -119,7 +119,7 @@ echo "oc adm release mirror --registry-config $OCP_PULLSECRET_AUTHFILE --from=qu
 
 echo ""
 echo "To initiate the upgrade on the cluster to $OCP_RELEASE_FULL, issue:"
-echo "oc adm upgrade --allow-explicit-upgrade --to-image $LOCAL_REGISTRY@$DIGEST"
+echo "oc adm upgrade --allow-explicit-upgrade --to-image $LOCAL_REGISTRY$LOCAL_REGISTRY_MIRROR_TAG@$DIGEST"
 }
 
 case "$1" in
