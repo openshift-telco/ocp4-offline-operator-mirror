@@ -26,7 +26,7 @@ export RH_OP_PACKAGES='advanced-cluster-management,cluster-logging,kubevirt-hype
 
 if [ $# -lt 1 ]
 then
-        echo "Usage : $0 mirror|mirror_olm|upgrade"
+        echo "Usage : $0 mirror|mirror-olm|upgrade"
         exit
 fi
 
